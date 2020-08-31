@@ -3,7 +3,7 @@ const request = require('request')
 
 let time = 10
 
-let url = 'http://localhost:8080'
+let url = 'https://api-mega-sena.herokuapp.com/'
 
 async function start() {
     console.log('Schedule url iniciado')
