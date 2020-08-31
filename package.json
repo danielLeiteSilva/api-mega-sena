@@ -1,5 +1,5 @@
 {
-  "name": "api-mega",
+  "name": "api-mega-sena",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,15 @@
     "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel19942015/api-mega-sena.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel19942015/api-mega-sena/issues"
+  },
+  "homepage": "https://github.com/daniel19942015/api-mega-sena#readme"
 }

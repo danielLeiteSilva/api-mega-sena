@@ -16,8 +16,6 @@ function buildFileJson() {
     }
 }
 
-buildFileJson()
-
 module.exports = {
     buildFileJson
 }
