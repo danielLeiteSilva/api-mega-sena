@@ -1,5 +1,5 @@
 const fs = require('fs')
-const path = "./json/data.json"
+const path = "../json/data.json"
 
 function recordFileJson(dados){
     try {

@@ -1,4 +1,4 @@
-let data = require('./json/data.json')
+let data = require('../json/data.json')
 const route = require('express').Router()
 const  { start } = require('./schedule')
 const  getUrl = require('./getUrl.js')
