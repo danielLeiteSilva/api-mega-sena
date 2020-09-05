@@ -1,10 +1,10 @@
-const { getData } = require('./getData')
-const { recordFileJson } = require('./recordFileJson')
+const { getData } = require('../readFile/getData')
+const { recordFileJson } = require('../readFile/recordFileJson')
 
 async function addDataJson() {
 
     try {
-        let data = require('../json/data.json')
+        let data = require('../../json/data.json')
         let result = JSON.parse(await getData())
         let json = data.find(element => element.Concurso === result.numero_concurso)
 

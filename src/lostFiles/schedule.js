@@ -1,14 +1,14 @@
 const schedule = require('node-schedule')
-const { addDataJson } = require('./addDataJson')
-const functions = require('./functions')
-
+const functions = require('../readFile/functions')
+const { createFile } = require('../generateFile/createFile')
 let timeSchedule = 60
 
 function start(){
     console.info(`[${functions.date_hour()}][INFO] Schedule iniciado`)
+
     let job = schedule.scheduleJob(`*/${timeSchedule} * * * *`, async function(){
         console.info(`[${functions.date_hour()}][START] Get jogo da mega sena`)
-        await addDataJson()
+        await createFile()
         console.info(`[${functions.date_hour()}][END] Dados Obtidos! Esperando... ${timeSchedule} min`)
     })
 }

@@ -20,8 +20,6 @@ function buildObjectjson() {
                 d['H']
             ]
 
-            numeros = numeros.sort(function(a, b){return a-b})
-
             dadosNovos['Concurso'] = d['A']
             dadosNovos['Data'] = d['B']
             dadosNovos['bola_1'] = numeros[0]
@@ -36,8 +34,7 @@ function buildObjectjson() {
         return dados    
 
     } catch (error) {
-        console.error('ERRO', dadosNovos)
-
+        console.error('ERRO')
         return false
     }
 }
