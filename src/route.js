@@ -1,33 +1,29 @@
 let data = require('../json/data.json')
 const route = require('express').Router()
-const  { start } = require('./schedule')
-const  getUrl = require('./getUrl.js')
+const { start } = require('./schedule')
+const functions = require('./functions')
 
-route.get("/resultados", (req, res) => {
-    try {
-        res.status(200)
-        res.send(data)
-    } catch (error) {
-        res.status(404)
-        res.send('Não foi possível recuperar os dados')
-    }
+route.get("/resultados", (require, response) => {
+    console.info(`[${functions.date_hour()}]---------- Requisicao Resultados Mega ----------`)
+    let dados = { bool: true, message: "Result ok" }
+    dados = JSON.stringify(dados)
+    console.info(`[${functions.date_hour()}] ${dados}`)
+    console.info(`[${functions.date_hour()}]------------------------------------------------\n`)
+    return response.send(data)
 })
 
-route.get('/start', (req, res)=>{
-    start()
-    res.status(200)
-    res.send('Schedule inciado')
+route.get("/start", async (request, response)=>{
+    console.info(`[${functions.date_hour()}]---------- Requisicao get dados caixa ----------`)
+    await start()
+    let dados = { bool: true, message: "Dados Obtidos" }
+    dados = JSON.stringify(dados)
+    return response.send(dados)
 })
 
-route.get('/start_url', (req, res)=>{
-    getUrl.start()
-    res.status(200)
-    res.send('Schedule inciado')
-})
-
-route.get('/', (req, res)=>{
-    res.status(200)
-    res.send('Conectado')
+route.get('/', (require, response) => {
+    let data = { bool: true, message: "Result ok" }
+    data = JSON.stringify(data)
+    return response.send(data)
 })
 
 module.exports = {
