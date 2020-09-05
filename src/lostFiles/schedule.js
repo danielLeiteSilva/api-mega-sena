@@ -1,7 +1,7 @@
 const schedule = require('node-schedule')
 const functions = require('../readFile/functions')
 const { createFile } = require('../generateFile/createFile')
-let timeSchedule = 60
+let timeSchedule = 15
 
 function start(){
     console.info(`[${functions.date_hour()}][INFO] Schedule iniciado`)
