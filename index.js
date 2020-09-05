@@ -8,6 +8,9 @@ const uri = 'https://api-mega-sena.herokuapp.com/'
 app.use(cors())
 app.use(route)
 app.listen(port, () => {
-    wokeDyno(uri).start()
+    wokeDyno({
+        url: uri,
+        interval: 60000
+    }).start()
     console.log('Connect in server', port)
 })
