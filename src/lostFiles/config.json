@@ -1,6 +1,6 @@
 {
     "url":"https://apiloterias.com.br",
     "endpoint":"/app/resultado?",
-    "loteria":"megasena",
-    "token":"HKm5q00M7C2KQ56"
+    "loteria":"",
+    "token":""
 }
